@@ -7,7 +7,7 @@
 // local
 $__instances['local'] = array(
 	// The prefix should be a unique part of the url (not including protocol name or auth info; see below).
-	'prefix' => 'local.guppy.com.tr',
+	'prefix' => 'www.local.guppy.com.tr',
 	// mysql credentials
 	'db_host' => 'localhost',
 	'db_port' => 3306,
@@ -16,7 +16,7 @@ $__instances['local'] = array(
 	'db_name' => 'guppy_jobboard',
 	'db_prefix' => '',
 	// your site's full url
-	'app_url' => 'http://local.guppy.com.tr/',
+	'app_url' => 'http://www.local.guppy.com.tr/',
 	// language to use
 	'lang_code' => 'en',
 	// error reporting
