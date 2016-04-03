@@ -42,6 +42,23 @@ function addHostnameToHosts {
 
 }
 
+function installDevEnv {
+
+    cd vagrant/
+
+    echo "--- --- --- GUPPY --- --- ---";
+    echo "vagrant box update called";
+    #vagrant box update
+
+    echo "--- --- --- GUPPY --- --- ---";
+    echo "vagrant up called";
+    #vagrant up
+
+    echo "--- --- --- GUPPY --- --- ---";
+    echo "Trying to change $FILE file";
+    #addHostnameToHosts
+
+}
 
 
 ############################################################
@@ -50,27 +67,18 @@ function addHostnameToHosts {
 
 echo "GUPPY Development Environment is preparing ...";
 
-if [ $1 = "-c" ]
+if [ $# -gt 0 ]
     then
-
-        echo "Trying to change $FILE file";
-        addHostnameToHosts
+    if [ $1 = "-c" ]
+        then
+            echo "Trying to change $FILE file";
+            addHostnameToHosts
+        else
+            installDevEnv
+    fi
 
     else
-
-        cd vagrant/
-
-        echo "--- --- --- GUPPY --- --- ---";
-        echo "vagrant box update called";
-        vagrant box update
-
-        echo "--- --- --- GUPPY --- --- ---";
-        echo "vagrant up called";
-        vagrant up
-
-        echo "--- --- --- GUPPY --- --- ---";
-        echo "Trying to change $FILE file";
-        addHostnameToHosts
+        installDevEnv
 fi
 
 echo "GUPPY Development Environment was prepared succesfully :)";
