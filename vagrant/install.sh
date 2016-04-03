@@ -46,9 +46,9 @@ function addHostnameToHosts {
 
 function vagrantBoxUpdateAndUp {
 
-    echo "--- --- --- GUPPY --- --- ---";
-    echo "Starting install development environment...";
-    cd vagrant/
+    #echo "--- --- --- GUPPY --- --- ---";
+    #echo "Starting install development environment...";
+    #cd vagrant/
 
     echo "--- --- --- GUPPY --- --- ---";
     echo "vagrant box update called";
