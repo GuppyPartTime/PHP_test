@@ -1,11 +1,13 @@
 <?php
 /**
- * General settings
+ *
+ * @author     	Kemal Sami KARACA
+ * @description General settings
  *
  */
 
-// jobberBase version
-define('JOBBERBASE_VERSION', '2.0');
+// GUPPY JOB BOARD APPLICATION version
+define('GUPPY_JOBBOARD_VERSION', '1.0.0');
 
 // Global settings definitions
 foreach ($settings as $k => $setting)

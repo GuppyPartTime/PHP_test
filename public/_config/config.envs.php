@@ -31,24 +31,23 @@ $__instances['local'] = array(
 );
 
 // live
-//$__instances['live'] = array(
-//	'prefix' => 'yourjobberbasedomain.com',
-//	'db_host' => 'localhost',
-//	'db_port' => 3306,
-//	'db_user' => 'root',
-//	'db_password' => '',
-//	'db_name' => 'jobberbase',
-//	'db_prefix' => '',
-//	'app_url' => 'http://www.yourjobberbasedomain.com/',
-//	// language to use
-//	'lang_code' => 'en',
-//	'ini_error_reporting' => E_ALL,
-//	'ini_display_errors' => 'Off',
-//	'location' => 'online',
-//	'environment' => 'prod',
-//	'rewrite_mode' => 'apache_mod_rewrite'
-//);
-
+$__instances['live'] = array(
+	'prefix' => 'yourjobberbasedomain.com',
+	'db_host' => 'localhost',
+	'db_port' => 3306,
+	'db_user' => 'root',
+	'db_password' => '',
+	'db_name' => 'jobberbase',
+	'db_prefix' => '',
+	'app_url' => 'http://www.yourjobberbasedomain.com/',
+	// language to use
+	'lang_code' => 'en',
+	'ini_error_reporting' => E_ALL,
+	'ini_display_errors' => 'Off',
+	'location' => 'online',
+	'environment' => 'prod',
+	'rewrite_mode' => 'apache_mod_rewrite'
+);
 
 // http requests
 if (isset($_SERVER['HTTP_HOST']) && isset($_SERVER['REQUEST_URI']))
