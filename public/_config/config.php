@@ -23,7 +23,7 @@
 	{
 		die('[config.php] Cannot determine APP_MAIN_DIR, please set manual and comment this line');
   	}
-	
+
 
 	// Function and classes includes
 	require_once APP_PATH . '_lib/class.Translator.php';
@@ -101,16 +101,19 @@
 	// Setup translations
 	$translator = new Translator(LANG_CODE);
 	$translations = $translator->getTranslations();
-	
-    if ($cache->testCache(CACHE_TRANSLATIONS . '_' . LANG_CODE))
-    {
-        $translations = $cache->loadCache(CACHE_TRANSLATIONS . '_' . LANG_CODE);
-    }
-    else
-    {
-        $translations = $translator->getTranslations();
-        $cache->saveCache($translations, CACHE_TRANSLATIONS . '_' . LANG_CODE);
-    }
+
+
+// --- GUPPY_UPDATE ---
+// translation için cache hatası verdiginden comment alınmıstır.
+//    if ($cache->testCache(CACHE_TRANSLATIONS . '_' . LANG_CODE))
+//    {
+//        $translations = $cache->loadCache(CACHE_TRANSLATIONS . '_' . LANG_CODE);
+//    }
+//    else
+//    {
+//        $translations = $translator->getTranslations();
+//        $cache->saveCache($translations, CACHE_TRANSLATIONS . '_' . LANG_CODE);
+//    }
 	
 	
 	// Setup Smarty

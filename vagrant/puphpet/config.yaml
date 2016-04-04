@@ -361,7 +361,7 @@ mysql:
             sql: /var/www/guppy/db/guppy_jobboard.sql
     grants:
         mysqlng_s176jyf0vpbw:
-            user: guppy
+            user: guppy@%
             table: '*.*'
             privileges:
                 - ALL

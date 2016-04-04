@@ -290,20 +290,17 @@ function iniSectionsToJSON($iniSections)
 	$translationsJson = "{";
 	$sectionsCount = 0;
 
-	var_dump($iniSections);
-
 	foreach ($iniSections as $section => $sectionMessages)
 	{
-		var_dump($sectionMessages);
 		$translationsJson = $translationsJson . "\"" . $section . "\": {";
 		$sectionMessagesCount = 0;
 		
 		foreach ($sectionMessages as $messageKey => $messageText)
 		{
 			$translationsJson = $translationsJson . "\"".$messageKey . "\":\"" . preg_replace("/\r?\n/", "\\n", addslashes($messageText)) . "\"";
-			
+
 			$sectionMessagesCount++;
-			
+
 			if ($sectionMessagesCount < count($sectionMessages))
 				$translationsJson .= ",";
 		}
